@@ -1,8 +1,8 @@
 const request = require('request');
 
 const args = process.argv.slice(2);
-const breed = args[0]
-const URL = `https://api.thecatapi.com/v1/breeds/search?q=${breed}`
+const breed = args[0];
+const URL = `https://api.thecatapi.com/v1/breeds/search?q=${breed}`;
 
 request(URL, (error, response, body) => {
   let data = JSON.parse(body);
